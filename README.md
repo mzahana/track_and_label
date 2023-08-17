@@ -5,12 +5,16 @@ A script to automate image dataset labeling. Images are asusmed to be extracted 
 * OpenCV
 * `pip install opencv-contrib-python`
 # Usage
-```
-python3 track_and_label.py images_directory
-```
+* First extract the set of ordered images from a video.
+* Then, execute,
+  ```
+  python3 track_and_label.py images_directory
+  ```
 There are instrucitons on the displayed window to show you how you can use the script
 
 There should be 3 generated directories that shall be saved inside a directory named `output`
 * `output/images` Images with `640x640` size
 * `ouput/labels` Bounding boxes compatibe with Yolov5
 * `output/imgs_with_bbx` images with bounding boxes for inspection
+
+* The `output` directory will be in the same directory as the `track_and_label.py` script.
