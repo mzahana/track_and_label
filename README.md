@@ -4,9 +4,19 @@ A script to automate image dataset labeling. Images are asusmed to be extracted 
 **NOTE** Currently the script supports single object tracking and labeling. The multi-object use case is planned for future release.
 
 # Dependencies
-* OpenCV
+* `Python >= 3.8`
+* `OpenCV >= 4.2.0`
 * `pip install opencv-contrib-python`
+* ` pip3 install Pillow`
+* `sudo apt-get install python3-pil.imagetk`
+* `sudo apt-get install python3-tk`
 # Usage
+## Image extraction form a video
+You can use the `extract_frames_from_video.py` to extract images from a video.
+* First download the video
+* Run the script `python3 extract_frames_from_video.py`
+* It will open a GUI in which you can select the input video, the output directory, the start/end time, frame/second and then you can  extract the image frames accordingly.
+## Labeling
 * First extract the set of ordered images from a video.
 * Then, execute,
   ```
