@@ -1,6 +1,8 @@
 # track_and_label
 A script to automate image dataset labeling. Images are asusmed to be extracted from a video. This code assumes you have a directory with images taken sequentially, which you would like to label with bounding boxes for object tracking. The images should be named in a way that allows them to be sorted in the correct order.
 
+**NOTE** Currently the sctit supports single object tracking and labeling. Multi-object is planned for future release.
+
 # Dependencies
 * OpenCV
 * `pip install opencv-contrib-python`
