@@ -62,7 +62,7 @@ if __name__ == '__main__':
     output_dir = 'output'
     output_image_dir = os.path.join(output_dir, "images")
     output_label_dir = os.path.join(output_dir, "labels")
-    output_bbox_dir = os.path.join(output_dir, "imgs_with_bbx") 
+    output_bbox_dir = os.path.join(output_dir, "imgs_with_box") 
     os.makedirs(output_image_dir, exist_ok=True)
     os.makedirs(output_label_dir, exist_ok=True)
     os.makedirs(output_bbox_dir, exist_ok=True)
