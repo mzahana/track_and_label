@@ -58,11 +58,12 @@ if __name__ == '__main__':
 
     image_dir = sys.argv[1]
     image_files = sorted([f for f in os.listdir(image_dir) if f.endswith('.jpg')])
+    image_files.sort(key=lambda x: int(os.path.splitext(x)[0]))  # Sort images based on numeric filename
 
     output_dir = 'output'
     output_image_dir = os.path.join(output_dir, "images")
     output_label_dir = os.path.join(output_dir, "labels")
-    output_bbox_dir = os.path.join(output_dir, "imgs_with_box") 
+    output_bbox_dir = os.path.join(output_dir, "imgs_with_bbx") 
     os.makedirs(output_image_dir, exist_ok=True)
     os.makedirs(output_label_dir, exist_ok=True)
     os.makedirs(output_bbox_dir, exist_ok=True)
@@ -134,10 +135,10 @@ if __name__ == '__main__':
             tracker.init(resized_image, roi)
             prev_bbox = roi
             paused = False
-        elif key == 83: # Right key
+        elif key == ord('l'): # Right key
             paused = True
             image_index += 1
-        elif key == 81: # Left key
+        elif key == ord('j'): # Left key
             paused = True
             image_index -= 1
             if image_index < 0:
